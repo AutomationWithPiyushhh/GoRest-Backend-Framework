@@ -1,0 +1,17 @@
+“In my current project, I have built a robust API automation framework from scratch using Java, REST Assured, TestNG, and Maven. The primary focus while designing it was separation of concerns, easy maintenance, and strict contract validation for our microservices.
+
+We structured the framework into modular packages to keep the implementation clean:
+
+Utilities Package: We have a generic utility package to handle external data and reporting. This includes a ConfigReader to fetch environment variables like Base URLs and Bearer Tokens, and an ExcelReader integrated with Apache POI for Data-Driven Testing.
+
+Payloads (POJO Design): Instead of passing hardcoded JSON strings, we use the POJO (Plain Old Java Object) design pattern. We map our request and response bodies to Java classes using Lombok to reduce boilerplate code, and Jackson for seamless Serialization and Deserialization. This ensures our payloads are dynamic and type-safe.
+
+Endpoints Package: We separate our API definitions from our tests. We have a Routes class that acts as a central repository for all endpoint URLs. Then, we have an Endpoints class that handles the actual REST Assured given/when/then logic for CRUD operations. If an API contract changes, I only have to update it in one place, not across all test scripts.
+
+Test Layer: The actual test scripts are written using TestNG. I utilized TestNG features like @DataProvider for executing tests with multiple sets of Excel data, and dependsOnMethods to handle Request Chaining. For example, my script creates a user via POST, extracts the dynamic ID from the response, and automatically passes that ID to the GET, PUT, and DELETE requests for true end-to-end validation.
+
+Contract Testing: Beyond just checking status codes, I implemented JSON Schema Validation. This ensures the structure and data types returned by the backend strictly comply with our API documentation.
+
+Reporting & CI/CD: For reporting, I integrated Extent Reports using TestNG Listeners. It automatically captures request details, status codes, and logs them into interactive HTML reports. Finally, the entire project is managed via Maven, making it seamless to trigger automated regression suites directly from our Jenkins CI/CD pipeline upon every new backend deployment.
+
+Overall, this framework eliminates hardcoding, provides deep visibility into backend defects early in the cycle, and significantly reduces the manual effort required for API regression.”

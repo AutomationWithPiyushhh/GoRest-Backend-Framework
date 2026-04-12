@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+
+<suite name="GoRest API Automation Suite" verbose="1">
+
+    <listeners>
+        <listener class-name="com.automationwithpiyush.gorest.utilities.ExtentReportManager" />
+    </listeners>
+
+    <test name="GoRest Users API Tests">
+        <classes>
+            <class name="com.automationwithpiyush.gorest.tests.UserEndToEndTests" />
+            
+            <class name="com.automationwithpiyush.gorest.tests.DataDrivenUserTests" />
+        </classes>
+    </test>
+
+</suite>

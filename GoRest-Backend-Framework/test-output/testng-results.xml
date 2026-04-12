@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-04-11T00:25:58 IST" name="GoRest API Automation Suite" finished-at="2026-04-11T00:26:07 IST" duration-ms="9640">
+    <groups>
+    </groups>
+    <test started-at="2026-04-11T00:25:58 IST" name="GoRest Users API Tests" finished-at="2026-04-11T00:26:07 IST" duration-ms="9640">
+      <class name="com.automationwithpiyush.gorest.tests.UserEndToEndTests">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.automationwithpiyush.gorest.tests.UserEndToEndTests@489115ef]" started-at="2026-04-11T00:25:58 IST" name="setup" finished-at="2026-04-11T00:25:58 IST" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testCreateUser()[pri:1, instance:com.automationwithpiyush.gorest.tests.UserEndToEndTests@489115ef]" started-at="2026-04-11T00:25:58 IST" name="testCreateUser" finished-at="2026-04-11T00:26:02 IST" duration-ms="4089" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateUser -->
+        <test-method signature="testGetUserDetails()[pri:2, instance:com.automationwithpiyush.gorest.tests.UserEndToEndTests@489115ef]" started-at="2026-04-11T00:26:02 IST" name="testGetUserDetails" finished-at="2026-04-11T00:26:03 IST" depends-on-methods="com.automationwithpiyush.gorest.tests.UserEndToEndTests.testCreateUser" duration-ms="624" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserDetails -->
+        <test-method signature="testUpdateUser()[pri:3, instance:com.automationwithpiyush.gorest.tests.UserEndToEndTests@489115ef]" started-at="2026-04-11T00:26:03 IST" name="testUpdateUser" finished-at="2026-04-11T00:26:03 IST" depends-on-methods="com.automationwithpiyush.gorest.tests.UserEndToEndTests.testCreateUser" duration-ms="627" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateUser -->
+        <test-method signature="testDeleteUser()[pri:4, instance:com.automationwithpiyush.gorest.tests.UserEndToEndTests@489115ef]" started-at="2026-04-11T00:26:03 IST" name="testDeleteUser" finished-at="2026-04-11T00:26:04 IST" depends-on-methods="com.automationwithpiyush.gorest.tests.UserEndToEndTests.testCreateUser" duration-ms="599" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteUser -->
+      </class> <!-- com.automationwithpiyush.gorest.tests.UserEndToEndTests -->
+      <class name="com.automationwithpiyush.gorest.tests.DataDrivenUserTests">
+        <test-method signature="testPostUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.automationwithpiyush.gorest.tests.DataDrivenUserTests@79079097]" started-at="2026-04-11T00:26:06 IST" name="testPostUser" data-provider="UserData" finished-at="2026-04-11T00:26:06 IST" duration-ms="615" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[John Automation]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[john.auto]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[male]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[active]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPostUser -->
+        <test-method signature="testPostUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.automationwithpiyush.gorest.tests.DataDrivenUserTests@79079097]" started-at="2026-04-11T00:26:06 IST" name="testPostUser" data-provider="UserData" finished-at="2026-04-11T00:26:07 IST" duration-ms="602" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sarah SDET]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sarah.sdet]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[female]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[active]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPostUser -->
+        <test-method signature="testPostUser(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.automationwithpiyush.gorest.tests.DataDrivenUserTests@79079097]" started-at="2026-04-11T00:26:07 IST" name="testPostUser" data-provider="UserData" finished-at="2026-04-11T00:26:07 IST" duration-ms="576" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Mike Tester]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[mike.tester]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[male]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[inactive]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPostUser -->
+      </class> <!-- com.automationwithpiyush.gorest.tests.DataDrivenUserTests -->
+    </test> <!-- GoRest Users API Tests -->
+  </suite> <!-- GoRest API Automation Suite -->
+</testng-results>
